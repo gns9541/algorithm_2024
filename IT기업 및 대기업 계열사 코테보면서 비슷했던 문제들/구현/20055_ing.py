@@ -17,17 +17,16 @@ while True:
     for j in range(2*N):
         if j == 2*N-1:
             new_belt[0] = belt[j]
-            new_robot[0] = new_robot[j]
+            new_robot[0] = robot[j]
             new_robot[j] = 0
         else:
             new_belt[j+1] = belt[j]
-            new_robot[j+1] = new_robot[j]
-            new_robot[j] = 0
+            new_robot[j+1] = robot[j]
+            # new_robot[j] = 0
             if robot[j+1] == N-1:
                 robot[j+1] = 0
     belt = copy.deepcopy(new_belt)
     robot = copy.deepcopy(new_robot)
-    print('ㄹㅂ',new_robot)
 
     # 2번 작업
     for i in range(N-2,-1,-1):
@@ -45,6 +44,8 @@ while True:
     if cnt == K:
         print(k)
         break
+    # robot = copy.deepcopy(new_robot)
+    print('ㄹㅂ',new_robot)
     print('로봇',robot)
     print('벨트',belt)
     print(' ')
