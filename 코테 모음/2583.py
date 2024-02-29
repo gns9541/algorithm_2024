@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(10000) 
 
 M,N,K = map(int, input().split())
 square = [list(map(int, input().split())) for _ in range(K)]
